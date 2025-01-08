@@ -7,21 +7,51 @@ $text-color-label: #A59ACA;
 $focus-color: #020202;
 
 // space scale
-$base-space-padding: 5px 0px;
+$base-space-1: 5px 0px;
+$base-space-2: 4px;
 
-//width height
+//size
 $width-input: 240px;
 $height-input: 27px;
+$br: 4px;
 
+// mixin
 
 //input wrapper default
 
 .input-email-wrapper {
     display: flex;
     flex-direction: column;
+    padding: $base-space-1;
+}
 
-    .input-email {
-        width: $width-input;
-        height: $height-input;
-    }
+@mixin variant-style-input($color-input, $text-color, $bg-color) {
+    border: 1px solid $color-input;
+    color: $text-color;
+    background-color: $bg-color;
+
+}
+
+.input-email {
+    width: 240px;
+    height: $height-input;
+    border-radius: $br;
+}
+
+
+.input-email--desabled {
+    width: 240px;
+    height: 60px;
+}
+
+.input-email--active {
+    width: 240px;
+    height: 60px;
+    color: #FF0000;
+}
+
+.input-email--error {
+    width: 240px;
+    height: 60px;
+    border: 1px solid $error-color;
 }

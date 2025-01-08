@@ -7,11 +7,11 @@ function InputEmail({ variant, label, onClick }) {
             <div className='input-email-wrapper'>
                 <label htmlFor='input'> Email* </label>
                 <input
-                    className={`input-email ${variant}`}
+                    className={['input-email', `input-email--${variant}`]}
                     type='email'
                     onClick={onClick}
                     placeholder={label}
-                    disabled={variant === 'disabled'}
+                /* disabled={variant === 'disabled'} */
                 >
                 </input>
             </div>
@@ -23,6 +23,12 @@ InputEmail.propTypes = {
     label: PropTypes.string,
     onClick: PropTypes.func,
 };
+
+InputEmail.defaultProps = {
+    variant: 'desabled',
+    label: 'ex:johnDoe@gmail.com',
+    onClick: undefined
+}
 
 
 
