@@ -1,0 +1,27 @@
+// global variable
+//colors
+$disabled-color: #868686;
+$error-color: #FF0000;
+$text-color-body: #020202;
+$text-color-label: #A59ACA;
+$focus-color: #020202;
+
+// space scale
+$base-space-padding: 5px 0px;
+
+//width height
+$width-input: 240px;
+$height-input: 27px;
+
+
+//input wrapper default
+
+.input-email-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .input-email {
+        width: $width-input;
+        height: $height-input;
+    }
+}

@@ -1,8 +1,12 @@
 import React from 'react'
+import InputEmail from '../components/InputEmail/InputEmail'
 
 function SignUp() {
     return (
-        <div>hello</div>
+        <>
+            <InputEmail />
+        </>
+
     )
 }
 
