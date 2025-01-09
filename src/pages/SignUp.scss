@@ -1,0 +1,17 @@
+@use '../variables.scss' as vars;
+
+.wrapper-form {
+    display: flex;
+    justify-content: space-between;
+    padding: vars.$base-space-4;
+    width: 100vh;
+    height: 100vh;
+
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+
+    }
+}
