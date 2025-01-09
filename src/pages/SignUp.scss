@@ -1,14 +1,9 @@
 @use '../variables.scss' as vars;
 
 .wrapper-form {
-
-    /*  display: flex;
-    justify-content: space-between; */
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    /* 16 colonnes de taille égale */
+    grid-template-columns: repeat(vars.$colonnes-grid, 1fr);
     gap: 20px;
-    /* Gouttière entre les colonnes */
     padding: vars.$base-space-4;
     height: 100vh;
 

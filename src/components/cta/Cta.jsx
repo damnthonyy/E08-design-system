@@ -22,7 +22,7 @@ Cta.propTypes = {
 }
 
 Cta.defaultProps = {
-    label: 'Sign in',
+    label: "Sign In",
     type: 'signIn',
     onClick: () => { },
 };
