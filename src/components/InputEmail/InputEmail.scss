@@ -1,0 +1,97 @@
+@use '../../variables.scss' as vars;
+
+//mixin for size input
+@mixin size-input($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin style-default-input($flex, $column, $padding, $gap) {
+    display: $flex;
+    flex-direction: $column;
+    padding: $padding;
+    gap: $gap;
+}
+
+// style input default
+.input-email-wrapper {
+    /* display: flex;
+    flex-direction: column;
+    padding: vars.$base-space-1;
+    gap: vars.$base-space-2; */
+    @include style-default-input(flex, column, vars.$base-space-2 , vars.$base-space-2 );
+    @include size-input(vars.$width-input, vars.$height-input);
+
+    .input-label {
+        color: vars.$text-color-label;
+        font-size: vars.$font-size-link;
+    }
+}
+
+.input-email {
+    border: 1px solid vars.$disabled-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+
+    }
+}
+
+//input-email--disabled
+.input-email--disabled {
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input );
+
+    .input-email {
+        border: 1px solid vars.$disabled-color;
+        border-radius: vars.$br-input;
+
+        &::placeholder {
+            color: vars.$disabled-color;
+            padding: vars.$base-space-3;
+
+        }
+    }
+}
+
+//input-email--active
+
+.input-email--active {
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input);
+    border: 1px solid vars.$focus-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+        display: none
+    }
+
+    /* .input-label {
+        color: vars.$error-color;
+    } */
+
+    /* .input-email {} */
+
+}
+
+//input-email--error
+.input-email--error {
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input);
+
+    border: 1px solid vars.$error-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+
+    }
+
+
+
+}
