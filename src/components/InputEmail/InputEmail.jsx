@@ -2,17 +2,19 @@ import React from 'react'
 import './InputEmail.scss'
 import PropTypes from 'prop-types'
 function InputEmail({ variant, label, onClick }) {
+    const dynamicLabel = label || `variant: ${variant}`;
     return (
         <>
             <div className='input-email-wrapper'>
-                <label htmlFor='input'> Email* </label>
+                <label htmlFor='input' className='input-label'> Email* </label>
                 <input
-                    className={['input-email', `input-email--${variant}`]}
+                    className={['input-email', `input-email--${variant}`].join(' ')}
                     type='email'
                     onClick={onClick}
-                    placeholder={label}
+                    placeholder={dynamicLabel}
                 /* disabled={variant === 'disabled'} */
                 >
+
                 </input>
             </div>
         </>
@@ -25,9 +27,9 @@ InputEmail.propTypes = {
 };
 
 InputEmail.defaultProps = {
-    variant: 'desabled',
-    label: 'ex:johnDoe@gmail.com',
-    onClick: undefined
+    variant: 'disabled',
+    label: 'johnDoe@gmail.com',
+    onClick: () => { },
 }
 
 

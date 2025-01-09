@@ -1,4 +1,4 @@
-import React from "react";
+import { fn } from '@storybook/test';
 import InputEmail from "./InputEmail";
 
 export default {
@@ -18,21 +18,31 @@ export default {
             description: 'Defines the variant style of the input',
         },
         onClick: { action: 'clicked', description: 'Click event handler' },
-    }
+    },
+    args: { onClick: fn() },
 
 }
 
 export const Disabled = {
-    variant: 'disabled',
-    label: '',
+    args: {
+        variant: 'disabled',
+        label: 'johnDoe@gmail.com',
+    }
+
 };
 
 export const Active = {
-    variant: 'active',
-    label: '',
+    args: {
+        variant: 'active',
+        label: ' ',
+    }
+
 };
 
 export const Error = {
-    variant: 'error',
-    label: 'please write a correct password',
+    args: {
+        variant: 'error',
+        label: 'please write the corect email',
+    }
+
 };

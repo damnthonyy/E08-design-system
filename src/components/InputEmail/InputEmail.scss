@@ -1,57 +1,97 @@
-// global variable
-//colors
-$disabled-color: #868686;
-$error-color: #FF0000;
-$text-color-body: #020202;
-$text-color-label: #A59ACA;
-$focus-color: #020202;
+@use '../../variables.scss' as vars;
 
-// space scale
-$base-space-1: 5px 0px;
-$base-space-2: 4px;
-
-//size
-$width-input: 240px;
-$height-input: 27px;
-$br: 4px;
-
-// mixin
-
-//input wrapper default
-
-.input-email-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: $base-space-1;
+//mixin for size input
+@mixin size-input($w, $h) {
+    width: $w;
+    height: $h;
 }
 
-@mixin variant-style-input($color-input, $text-color, $bg-color) {
-    border: 1px solid $color-input;
-    color: $text-color;
-    background-color: $bg-color;
+@mixin style-default-input($flex, $column, $padding, $gap) {
+    display: $flex;
+    flex-direction: $column;
+    padding: $padding;
+    gap: $gap;
+}
 
+// style input default
+.input-email-wrapper {
+    /* display: flex;
+    flex-direction: column;
+    padding: vars.$base-space-1;
+    gap: vars.$base-space-2; */
+    @include style-default-input(flex, column, vars.$base-space-2 , vars.$base-space-2 );
+    @include size-input(vars.$width-input, vars.$height-input);
+
+    .input-label {
+        color: vars.$text-color-label;
+        font-size: vars.$font-size-link;
+    }
 }
 
 .input-email {
-    width: 240px;
-    height: $height-input;
-    border-radius: $br;
+    border: 1px solid vars.$disabled-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+
+    }
 }
 
+//input-email--disabled
+.input-email--disabled {
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input );
 
-.input-email--desabled {
-    width: 240px;
-    height: 60px;
+    .input-email {
+        border: 1px solid vars.$disabled-color;
+        border-radius: vars.$br-input;
+
+        &::placeholder {
+            color: vars.$disabled-color;
+            padding: vars.$base-space-3;
+
+        }
+    }
 }
+
+//input-email--active
 
 .input-email--active {
-    width: 240px;
-    height: 60px;
-    color: #FF0000;
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input);
+    border: 1px solid vars.$focus-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+        display: none
+    }
+
+    /* .input-label {
+        color: vars.$error-color;
+    } */
+
+    /* .input-email {} */
+
 }
 
+//input-email--error
 .input-email--error {
-    width: 240px;
-    height: 60px;
-    border: 1px solid $error-color;
+    @include style-default-input(flex, column, vars.$base-space-1 , vars.$base-space-2);
+    @include size-input(vars.$width-input, vars.$height-input);
+
+    border: 1px solid vars.$error-color;
+    border-radius: vars.$br-input;
+
+    &::placeholder {
+        color: vars.$disabled-color;
+        padding: vars.$base-space-3;
+
+    }
+
+
+
 }
