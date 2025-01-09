@@ -4,27 +4,51 @@
 $font-size-body: 16px;
 $font-size-title: 39px;
 $font-size-link: 14px;
+$font-size-link-2: 10px;
+$font-size-title-2: 20px;
+
 
 //size input
 $width-input: 240px;
 $height-input: 27px;
 
+// size button
+$width-button: 240px;
+$height-button: 34px;
+
+
 
 //color
 $disabled-color: #868686;
+$bg-color-err-before: #FF7777;
+$bg-color-err-after: #FF0000;
+
 $error-color: #FF0000;
 $text-color-body: #020202;
 $text-color-label: #A59ACA;
 $focus-color: #020202;
 $white-color: #FFFF;
+$bg-color-button-before: #A59ACA;
+$bg-color-button-after: #7C6CB2;
 
 // scale and gap
+$base-space-0: 5px;
 $base-space-1: 5px 0px;
 $base-space-2: 4px;
 $base-space-3: 6px 122px 6px 10px;
 $base-space-4: 38px 40px 38px 40px;
 $base-space-5: 5px;
+$base-space-6 :10px;
+$base-space-7 :20px;
+$base-space-8: 23px;
 
+//size pics
+$width-pic-login: 670px;
+$height-pic-login: 728px;
 
 //border
 $br-input: 5px;
+
+//other 
+$width-line: 105px;
+$height-line: 1px;

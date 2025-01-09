@@ -35,6 +35,7 @@ export const Active = {
     args: {
         variant: 'active',
         label: ' ',
+
     }
 
 };
