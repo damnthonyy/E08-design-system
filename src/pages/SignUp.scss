@@ -1,0 +1,119 @@
+@use '../variables.scss' as vars;
+
+.wrapper-form {
+
+    /*  display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    /* 16 colonnes de taille égale */
+    gap: 20px;
+    /* Gouttière entre les colonnes */
+    padding: vars.$base-space-4;
+    height: 100vh;
+
+    .wrapper-side-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: vars.$base-space-7;
+        justify-content: center;
+        grid-column: 4/6;
+        width: fit-content;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: vars.$base-space-6;
+            width: 305px;
+            height: auto;
+
+            .header-h1 {
+                font-size: vars.$font-size-title-2;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            .header-p {
+                font-size: vars.$font-size-body;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                color: vars.$text-color-body;
+                width: 100%;
+            }
+        }
+
+        .form-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            float: right;
+
+            .fg-pwd {
+                font-size: vars.$font-size-link;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
+
+            }
+
+            .wrapper-side-sign-in {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: vars.$base-space-8;
+
+                .line-style {
+                    display: flex;
+                    align-items: center;
+                    gap: vars.$base-space-6;
+
+                    .line-left,
+                    .line-right {
+                        display: block;
+                        width: vars.$width-line;
+                        height: 1px;
+                        background: vars.$disabled-color;
+                    }
+
+                    .or-style {
+                        font-size: vars.$font-size-link-2;
+                        color: vars.$text-color-body;
+
+                    }
+
+
+                }
+
+                .style-span {
+                    text-decoration: underline;
+                    color: vars.$text-color-label;
+                }
+
+                .link-to-sign-in {
+                    font-size: vars.$font-size-link;
+                }
+            }
+        }
+    }
+
+
+
+    .wrapper-side-cover {
+        grid-column: -1/-6;
+        float: left;
+        border-radius: 10px;
+        width: vars.$width-pic-login;
+        height: vars.$height-pic-login;
+        background: url(../../public/imgs/pic-login.jpeg) lightgray 50% / cover no-repeat;
+    }
+
+}
