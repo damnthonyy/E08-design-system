@@ -9,7 +9,7 @@ export default {
     },
     tags: ['autodocs'],
     argTypes: {
-        variant: {
+        types: {
             control: { type: 'select', options: ['signIn', 'get', 'delAccount'] },
             description: 'Defines the variant style of the input'
         },
@@ -24,7 +24,7 @@ export default {
 }
 export const signIn = {
     args: {
-        variant: 'signIn',
+        type: 'signIn',
         label: 'Sign In',
     }
 
@@ -32,7 +32,7 @@ export const signIn = {
 
 export const get = {
     args: {
-        variant: 'get',
+        type: 'get',
         label: 'Get a link',
     }
 
@@ -40,7 +40,7 @@ export const get = {
 
 export const delAccount = {
     args: {
-        variant: 'delAccount',
+        type: 'delAccount',
         label: 'Delete Account',
     }
 

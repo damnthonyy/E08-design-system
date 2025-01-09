@@ -24,7 +24,7 @@ function SignUp() {
                     <div className='form-content'>
                         <InputEmail />
                         <InputPassword />
-                        < a href='/Reset' >
+                        < a href='/ResetPage' >
                             <span className='fg-pwd'>Forgot Password ?</span>
                         </a>
                         <Cta type={'signIn'} />
@@ -43,10 +43,6 @@ function SignUp() {
                 <div className='wrapper-side-cover'>
                     {/* <img src={'../../public/imgs/pic-login.jpeg'} alt='#1' /> */}
                 </div>
-
-
-
-
 
             </div>
 
