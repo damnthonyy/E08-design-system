@@ -2,15 +2,6 @@ import { fn } from '@storybook/test';
 import InputEmail from "./InputEmail";
 
 export default {
-    /**
-  * Metadata for the Storybook configuration.
-  *
-  * @property {string} title - The title of the Storybook group.
-  * @property {React.Component} component - The React component being documented.
-  * @property {Object} parameters - Additional configuration for the stories.
-  * @property {Array<string>} tags - Tags to categorize the component in Storybook.
-  * @property {Object} argTypes - Configuration for the props and controls in Storybook.
-  */
     title: 'components/InputEmail',
     component: InputEmail,
     parameters: {

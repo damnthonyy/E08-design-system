@@ -1,12 +1,7 @@
 import { fn } from '@storybook/test';
 import Cta from './Cta';
 
-/**
- * @file Cta.stories.js
- * @description Stories for the `Cta` component, showcasing different button types like `signIn`, `get`, and `delAccount`.
- */
 export default {
-
     title: 'components/Cta',
     component: Cta,
     parameters: {
