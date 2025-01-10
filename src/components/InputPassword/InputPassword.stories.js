@@ -2,6 +2,15 @@ import { fn } from '@storybook/test';
 import InputPassword from "./InputPassword";
 
 export default {
+    /**
+    * Title and metadata for the Storybook.
+    *
+    * @property {string} title - The title of the Storybook group.
+    * @property {React.Component} component - The React component being documented.
+    * @property {Object} parameters - Configuration options for the stories (e.g., layout).
+    * @property {Array<string>} tags - Tags for categorizing the component in Storybook.
+    * @property {Object} argTypes - Configuration for props and controls in Storybook.
+    */
     title: 'components/InputPassword',
     component: InputPassword,
     parameters: {
@@ -34,7 +43,7 @@ export const Disabled = {
 export const Active = {
     args: {
         variant: 'active',
-        label: ' ',
+        label: ' Lorem ipsum123@',
 
     }
 
