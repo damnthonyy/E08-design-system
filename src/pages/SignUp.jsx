@@ -3,6 +3,7 @@ import InputPassword from '../components/InputPassword/InputPassword'
 import InputEmail from '../components/InputEmail/InputEmail'
 import './SignUp.scss'
 import Cta from '../components/cta/Cta';
+import { Link } from 'react-router-dom';
 
 
 function SignUp() {
@@ -24,9 +25,11 @@ function SignUp() {
                     <div className='form-content'>
                         <InputEmail />
                         <InputPassword />
-                        < a href='/ResetPage' >
+                        <Link to='/ResetPage'>
                             <span className='fg-pwd'>Forgot Password ?</span>
-                        </a>
+                        </Link>
+
+
                         <Cta type={'signIn'} />
                         <div className='wrapper-side-sign-in'>
                             <div className='line-style'>
