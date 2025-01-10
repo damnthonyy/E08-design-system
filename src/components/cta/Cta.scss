@@ -1,0 +1,62 @@
+@use '../../variables.scss' as vars;
+
+
+//global style button
+@mixin style-button($display, $width, $height) {
+    display: $display;
+    width: $width;
+    height: $height;
+
+
+}
+
+.storybook-button {
+
+    @include style-button(inline-block,
+        vars.$width-button ,
+        vars.$height-button ,
+
+    );
+    font-size: vars.$font-size-body;
+    color: vars.$white-color;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.storybook-button--signIn {
+    background-color: vars.$bg-color-button-before;
+    border: 1px solid vars.$bg-color-button-before;
+    border-radius: vars.$br-input;
+
+    &:hover {
+        background-color: vars.$bg-color-button-after;
+        animation: 1.5 ease-out;
+    }
+
+}
+
+.storybook-button--get {
+    background-color: vars.$bg-color-button-before;
+    border: 1px solid vars.$bg-color-button-before;
+    border-radius: vars.$br-input;
+    animation: 1s ease-in;
+
+    &:hover {
+        background-color: vars.$bg-color-button-after;
+        animation: 1.5 ease-out;
+    }
+}
+
+.storybook-button--delAccount {
+    background-color: vars.$bg-color-err-before;
+    border: 1px solid vars.$bg-color-err-before;
+    border-radius: vars.$br-input;
+    animation: 1s ease-in;
+
+    &:hover {
+        background-color: vars.$bg-color-err-after;
+        animation: 1.5 ease-out;
+    }
+}

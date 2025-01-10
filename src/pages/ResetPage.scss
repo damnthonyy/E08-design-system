@@ -1,0 +1,68 @@
+@use '../variables.scss' as vars;
+
+.wrapper-reset {
+    display: grid;
+    grid-template-columns: repeat(vars.$colonnes-grid, 1fr);
+    gap: 20px;
+    padding: vars.$base-space-4;
+    height: 100vh;
+
+    .wrapper-side-reset {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: vars.$base-space-7;
+        justify-content: center;
+        grid-column: 3/10;
+        width: fit-content;
+        align-items: flex-start;
+
+        .header-reset {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: vars.$base-space-6;
+
+            .h1-reset {
+                color: vars.$text-color-body;
+                font-size: vars.$font-size-title-2;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px
+            }
+
+            .p-reset {
+                color: vars.$text-color-body;
+                font-size: vars.$font-size-body;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+
+        .header-reset-form {
+            display: flex;
+            flex-direction: column;
+            gap: vars.$base-space-8;
+            align-items: flex-start;
+
+            .wrapper-input-email {
+                padding: 5px 0px;
+            }
+
+            .wrapper-input-cta-get {
+                padding: 5px 0px;
+            }
+        }
+
+    }
+
+    .wrapper-side-cover {
+        grid-column: -1/-6;
+        float: left;
+        border-radius: 10px;
+        width: vars.$width-pic-login;
+        height: vars.$height-pic-login;
+        background: url(../../public/imgs/pic-reset-page.jpeg) lightgray 50% / cover no-repeat;
+    }
+}
